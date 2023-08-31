@@ -19,3 +19,11 @@ public class Main {
         System.out.println(point2);
     }
 }
+
+// array practise
+class Array {
+    public static void main(String[] args) {
+        int[] a = {1,2,3,4};
+        System.out.println("array a " + Arrays.toString(a));
+    }
+}
