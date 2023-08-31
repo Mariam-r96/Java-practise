@@ -1,9 +1,10 @@
 package com.mariam;
 
 import java.awt.*;
+import java.util.Arrays;
 
+// The public class that has the same name as the Java file.
 public class Main {
-
     public static void main(String[] args) {
         // for primitive types
         byte a = 3;
