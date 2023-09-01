@@ -2,6 +2,7 @@ package com.mariam;
 
 import java.awt.*;
 import java.util.Arrays;
+import java.util.Scanner;
 
 // The public class that has the same name as the Java file.
 public class Main {
@@ -30,5 +31,19 @@ class Array {
         //multi-dimensional array
         int[][] numbers = {{1,2,3},{4,5,6}};
         System.out.println("multi-dimensional array " + Arrays.deepToString(numbers));
+    }
+}
+
+//reading input
+class ReadInput {
+    public static void main(String[] args){
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Name : ");
+        String name = scanner.nextLine();
+        System.out.println("Your name is " + name);
+
+        System.out.print("Age : ");
+        byte age = scanner.nextByte();
+        System.out.println("Your age is " + age);
     }
 }
