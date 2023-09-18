@@ -71,3 +71,48 @@ class MortgageCalculator{
         System.out.println("mortgage "+ NumberFormat.getCurrencyInstance().format(mortgage));
     }
 }
+
+class BuildingDynamicArray{
+    private int[] items;
+    private int count;
+
+    public BuildingDynamicArray(int length){
+        items = new int[length];
+    }
+
+    public void insert(int item){
+        items[count++] = item;
+        // array is full, resize it
+        if(count == items.length){
+            // create a new array twice the size
+            //copy existing items and set items to the new array
+           int [] newItems = new int[count * 2];
+           for(int i = 0 ; i < count ; i++){
+               newItems[i] = items[i];
+           }
+           items = newItems;
+        }
+    }
+
+    public void print(){
+        for (int i= 0; i < count ; i++){
+            System.out.println(items[i]);
+        }
+    }
+    public static void main(String [] args){
+//        Scanner scanner = new Scanner(System.in);
+//        System.out.println("Enter length of array");
+//        int length = scanner.nextInt();
+        BuildingDynamicArray numbers = new BuildingDynamicArray(3);
+        numbers.insert(1);
+        numbers.insert(2);
+        numbers.insert(3);
+        numbers.insert(4);
+        numbers.insert(5);
+        numbers.insert(6);
+        numbers.print();
+
+    }
+
+
+}
