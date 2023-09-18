@@ -94,6 +94,17 @@ class BuildingDynamicArray{
         }
     }
 
+    public void removeAt(int index){
+        if((index < 0) || index >= count ){
+            throw new IllegalArgumentException();
+        } else {
+            for (int i = index ; i < count ; i++){
+                items[i] = items[i+1];
+            }
+            count --;
+        }
+    }
+
     public void print(){
         for (int i= 0; i < count ; i++){
             System.out.println(items[i]);
@@ -110,6 +121,7 @@ class BuildingDynamicArray{
         numbers.insert(4);
         numbers.insert(5);
         numbers.insert(6);
+        numbers.removeAt(2);
         numbers.print();
 
     }
