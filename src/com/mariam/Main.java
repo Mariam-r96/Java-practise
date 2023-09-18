@@ -105,6 +105,14 @@ class BuildingDynamicArray{
         }
     }
 
+    public int indexOf(int item){
+        for (int i = 0 ; i < count ; i++){
+            if(item == items[i])
+                return i;
+        }
+        return -1;
+    }
+
     public void print(){
         for (int i= 0; i < count ; i++){
             System.out.println(items[i]);
@@ -122,6 +130,7 @@ class BuildingDynamicArray{
         numbers.insert(5);
         numbers.insert(6);
         numbers.removeAt(2);
+        System.out.println("index of 4 is: " + numbers.indexOf(4));
         numbers.print();
 
     }
