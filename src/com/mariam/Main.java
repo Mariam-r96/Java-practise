@@ -9,16 +9,28 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         // for primitive types
-        byte a = 3;
-        byte b = a;
-        a = 5;
-        System.out.println(b);
+//        byte a = 3;
+//        byte b = a;
+//        a = 5;
+//        System.out.println(b);
+//
+//        // for reference types
+//        Point point1 = new Point(1,1);
+//        Point point2 = point1;
+//        point1.x = 2;
+//        System.out.println(point2);
 
-        // for reference types
-        Point point1 = new Point(1,1);
-        Point point2 = point1;
-        point1.x = 2;
-        System.out.println(point2);
+//        Linked list
+        var list = new LinkedList();
+        list.addLast(10);
+        list.addLast(20);
+        list.addLast(30);
+        list.addFirst(90);
+        System.out.println(list.indexOf(20));
+        System.out.println(list.contains(200));
+        list.removeLast();
+
+
     }
 }
 
@@ -137,3 +149,16 @@ class BuildingDynamicArray{
 
 
 }
+
+//class LinkedList{
+//    private Node first;
+//    private Node last;
+//    public static void main (String[] args){
+//
+//    }
+////
+//    public class Node {
+//        private int value;
+//        private Node next;
+//    }
+//}
